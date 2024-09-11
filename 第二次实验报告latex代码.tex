@@ -1,0 +1,221 @@
+\documentclass{article}
+%导言区
+\setlength{\parindent}{0pt}
+\usepackage{float} % 引入float宏包
+\usepackage{listings}
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage[a4paper, body={18cm,22cm}]{geometry}
+\usepackage{amsmath,amssymb,amstext,wasysym,enumerate,graphicx}
+\usepackage{float,abstract,booktabs,indentfirst,amsmath}
+\usepackage{array}
+\usepackage{booktabs} %调整表格线与上下内容的间隔
+\usepackage{multirow}
+\usepackage{diagbox}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\graphicspath{{figures2/}}
+
+%正文区
+\begin{document}
+\begin{titlepage}
+\centering
+\includegraphics[width=12cm,height=10cm]{logo.jpg}\\
+\vspace{2cm}
+{\Huge \heiti 系统开发工具基础实验报告\\} 
+
+\vspace{4cm}
+\begin{table}[h]
+        \centering
+        \begin{Large}
+            \begin{tabular}{p{3cm} p{7cm}<{\centering}}
+                上课时间: &  周五1-4节     \\ \cline{2-2}
+                姓\qquad 名:      & 张仕达   \\ \cline{2-2}
+                学\qquad 号: & 23010022094 \\ \cline{2-2}
+                指导老师:       & 周小伟 \\ \cline{2-2}
+            \end{tabular}
+        \end{Large}     
+    \end{table}
+\end{titlepage}
+\newpage % 插入新页  
+\thispagestyle{empty} % 当前页不显示页码  
+\section{实验内容}
+\subsection{主题1：shell编程：自定义无参带返回值函数}  
+\subsubsection{内容}
+定义一个函数，求两个数的最大值\\
+脚本内容:\\
+\includegraphics[width=0.8\textwidth]{test01_01}\\
+\subsubsection{结果} 
+\includegraphics[width=0.8\textwidth]{test01_02}\\
+\subsection{主题2：shell编程：自定义有参函数}  
+\subsubsection{内容}
+定义一个函数，返回指定参数\\
+\includegraphics[width=0.8\textwidth]{test02_01}\\
+\subsubsection{结果} 
+\includegraphics[width=0.8\textwidth]{test02_02}\\
+\subsection{主题3：shell工具：cut}  
+\subsubsection{内容}
+切割提取指定列数据\\
+文本内容：\\
+cu1.txt:\\
+11 22 333\\
+aa bb ccc\\
+44 55 666\\
+aa bb ccc\\
+命令：按空格来分割切取第一列和第三列的内容\\
+cut cu1.txt -d " " -f 1,3\\
+\subsubsection{结果} 
+\includegraphics[width=0.8\textwidth]{test03_01}\\
+\subsection{主题4：shell工具：sed}  
+\subsubsection{内容}
+向指定行号前或后添加数据\\
+文本内容：\\
+cu1.txt:\\
+11 22 333\\
+aa bb ccc\\
+44 55 666\\
+aa bb ccc\\
+命令：向第三行前添加qqq"\\
+sed "3iqqq" cu1.txt\\
+3表示行号，i表示向前添加\\
+命令：向第三行后添加"qqq"\\
+sed "3aqqq" cu1.txt\\
+3表示行号，a表示向后添加\\
+\subsubsection{结果} 
+\includegraphics[width=0.8\textwidth]{test03_02}\\\\
+\includegraphics[width=0.8\textwidth]{test03_03}\\
+\subsection{主题5：shell工具：awk}  
+\subsubsection{内容}
+awk是一种文本分析工具，默认按照每行空格切割数据\\
+命令：\\
+\includegraphics[width=0.8\textwidth]{test04_01}\\
+\subsubsection{结果} 
+\includegraphics[width=0.8\textwidth]{test04_02}\\
+\subsection{主题6：vim: vimrc的配置}  
+\subsubsection{内容}
+将.vimrc文件放在用户的目录下面，就会对vim进行配置，配置后vim的功能将更加完善。\\
+\includegraphics[width=0.8\textwidth]{test05_01}\\
+\subsubsection{结果} 
+\includegraphics[width=0.8\textwidth]{test05_02}\\
+\subsection{主题7：数据处理}  
+\subsubsection{内容}
+查询文件中含有"aa"的行数据\\
+文本内容：\\
+cu1.txt:\\
+11 22 333\\
+aa bb ccc\\
+44 55 666\\
+aa bb ccc\\
+命令：\\
+sed -n '/aa/p' cu1.txt
+\subsubsection{结果} 
+\includegraphics[width=0.8\textwidth]{test06_01}\\
+\subsection{主题8：数据处理：查询一个文件（file.txt）中空行所在的行号}  
+\subsubsection{内容}
+脚本实现\\
+1.file.txt 数据准备\\
+test test\\
+\\
+111 111\\
+222 222\\
+\\
+333 333\\
+2.脚本实现\\
+1.检查file.txt文件是否存在  \\
+2.使用grep查找空行，并打印行号  \\
+\includegraphics[width=0.8\textwidth]{test1_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test1_02}\\
+\vspace{1cm}
+\subsection{主题9：数据处理：对一个文件中的每一行第一个数字进行排序}  
+\subsubsection{内容}
+1.file.txt 数据准备\\
+\includegraphics[width=0.8\textwidth]{test2_01}\\
+2.脚本实现\\
+检查file.txt文件是否存在 \\
+使用awk提取数字行，并通过sort命令进行排序，最后输出结果\\
+假设每行都是数字或者包含数字（但只关注第一个数字）\\
+\includegraphics[width=0.8\textwidth]{test2_02}\\
+\subsubsection{结果}   
+\includegraphics[width=0.8\textwidth]{test2_03}\\
+\subsection{主题10：数据处理：查找root下所有包含“111”的文件名称}  
+\subsubsection{内容}
+脚本实现\\
+1.使用find命令来遍历根目录\\
+2.使用chmod +x 脚本名 命令给予该脚本执行权限。\\
+\includegraphics[width=0.8\textwidth]{test3_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test3_02}\\
+\subsection{主题11：数据处理：输出文件内长度大于3的单词}  
+\subsubsection{内容}
+1.数据准备\\
+aaar aaas asd\\
+r\\
+aaf as\\
+2.脚本实现\\
+\includegraphics[width=0.8\textwidth]{test11_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test11_02}\\
+\subsection{主题12：数据处理：单词去重排序}  
+\subsubsection{内容}
+文件内容：\\
+\includegraphics[width=0.8\textwidth]{test12_01}\\
+脚本内容：\\
+\includegraphics[width=0.8\textwidth]{test12_02}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test12_03}\\
+\vspace{1cm}
+\subsection{主题13：shell脚本编程：批量生成文件}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test4_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test4_02}\\
+\vspace{1cm}
+\subsection{主题14：shell脚本编程：猜数字游戏}  
+\subsubsection{内容}
+脚本内容：\\
+\includegraphics[width=0.8\textwidth]{test13_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test13_02}\\
+\newpage
+\thispagestyle{empty}
+\subsection{主题15：shell脚本编程：输入三个数并进行升序排序}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test14_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test14_02}\\
+\vspace{1cm}
+\subsection{主题16：shell脚本编程：石头、剪刀、布游戏} 
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test16_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test16_02}\\
+\vspace{1cm}
+\subsection{主题17：shell脚本编程：打印乘法口诀表}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test17_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test17_02}\\
+\vspace{1cm}
+\subsection{主题18：shell脚本编程：对1到100进行求和}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test18_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test18_02}\\
+\vspace{1cm}
+\subsection{主题19：shell脚本编程：打印国际象棋棋盘}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test19_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test19_02}\\
+\vspace{1cm}
+\subsection{主题20：判断用户输入字符类型}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test20_01}\\
+\subsubsection{结果} 
+\includegraphics[width=0.8\textwidth]{test20_02}\\ 
+\newpage
+\thispagestyle{empty}
+\section{解题感悟}  
+  shell编程的学习让我对文件的操作更加熟练了，再加上vim的使用，我现在能够更加方便的对各种文件进行修改。类似编程、功能却更加偏实用的脚本则让我对于代码的兴趣更加的浓厚。这次课程的学习让我受益匪浅。\\\\
+\href{https://github.com/coff-sug/system_development.git}{github地址[点击]}
+\end{document}

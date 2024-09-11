@@ -1,0 +1,202 @@
+\documentclass{article}
+%导言区
+\setlength{\parindent}{0pt}
+\usepackage{listings}
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage[a4paper, body={18cm,22cm}]{geometry}
+\usepackage{amsmath,amssymb,amstext,wasysym,enumerate,graphicx}
+\usepackage{float,abstract,booktabs,indentfirst,amsmath}
+\usepackage{array}
+\usepackage{booktabs} %调整表格线与上下内容的间隔
+\usepackage{multirow}
+\usepackage{diagbox}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\graphicspath{{figures3/}}
+
+%正文区
+\begin{document}
+\begin{titlepage}
+\centering
+\includegraphics[width=12cm,height=10cm]{logo}\\
+\vspace{2cm}
+{\Huge \heiti 系统开发工具基础实验报告\\} 
+
+\vspace{4cm}
+\begin{table}[h]
+        \centering
+        \begin{Large}
+            \begin{tabular}{p{3cm} p{7cm}<{\centering}}
+                上课时间: &  周五1-4节     \\ \cline{2-2}
+                姓\qquad 名:      & 张仕达   \\ \cline{2-2}
+                学\qquad 号: & 23010022094 \\ \cline{2-2}
+                指导老师:       & 周小伟 \\ \cline{2-2}
+            \end{tabular}
+        \end{Large}     
+    \end{table}
+\end{titlepage}
+\newpage % 插入新页  
+\thispagestyle{empty} % 当前页不显示页码  
+\section{实验内容}
+\subsection{主题1：命令行环境：别名}  
+\subsubsection{内容}
+创建一个 dc 别名，它的功能是当我们错误的将 cd 输入为 dc 时也能正确执行。\\
+在用户目录里建一个.bashrc的文件\\
+加入：alias dc="cd"并保存即可\\
+\includegraphics[width=0.8\textwidth]{test1_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test1_02}\\
+\vspace{1cm}
+\subsection{主题2：命令行环境：远端设备}  
+\subsubsection{内容}
+为虚拟机配置一个密钥\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test2}\\
+\vspace{1cm}
+\subsection{主题3：python基础练习}  
+\subsubsection{内容}
+斐波那契数列\\
+\includegraphics[width=0.8\textwidth]{test3_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test3_02}\\
+\vspace{1cm}
+\subsection{主题4：python基础练习}  
+\subsubsection{内容}
+判断质数\\
+\includegraphics[width=0.8\textwidth]{test4_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test4_02}\\
+\vspace{1cm}
+\subsection{主题5：python基础练习}  
+\subsubsection{内容}
+返回一个数的阶乘\\
+\includegraphics[width=0.8\textwidth]{test5_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test5_02}\\
+\vspace{1cm}
+\subsection{主题6：python基础练习}  
+\subsubsection{内容}
+输出字符转长度\\
+\includegraphics[width=0.8\textwidth]{test6_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test6_02}\\
+\vspace{1cm}
+\subsection{主题7：python scipy}  
+\subsubsection{内容}
+打印角度单位，返回弧度\\
+\includegraphics[width=0.8\textwidth]{test7_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test7_02}\\
+\newpage
+\thispagestyle{empty}
+\subsection{主题8：python scipy}  
+\subsubsection{内容}
+打印圆周率、黄金分割率\\
+\includegraphics[width=0.8\textwidth]{test8_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test8_02}\\
+\vspace{1cm}
+\subsection{主题9：python numpy}  
+\subsubsection{内容}
+np.arange返回一个向量组\\
+\includegraphics[width=0.8\textwidth]{test9_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test9_02}\\
+\vspace{1cm}
+\subsection{主题10：python numpy}  
+\subsubsection{内容}
+array: 向量；
+arry.ndim: 向量的维度；\\
+array.shape: 向量有几行几列\\
+array.size: 向量的尺寸 2*3=6。\\
+\includegraphics[width=0.8\textwidth]{test12_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test12_02}\\
+\subsection{主题11：python numpy}  
+\subsubsection{内容}
+向量的分割\\
+\includegraphics[width=0.8\textwidth]{test10_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test10_02}\\
+\vspace{1cm}
+\subsection{主题12：python numpy}  
+\subsubsection{内容}
+向量的合并\\
+\includegraphics[width=0.8\textwidth]{test11_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test11_02}\\
+\vspace{1cm}
+\subsection{主题13：python matplotlib}  
+\subsubsection{内容}
+绘制简单树状图\\
+\includegraphics[width=0.8\textwidth]{test13_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test13_02}\\
+\vspace{1cm}
+\subsection{主题14：python matplotlib}  
+\subsubsection{内容}
+绘制简单散点图\\
+\includegraphics[width=0.8\textwidth]{test14_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test14_02}\\
+\newpage
+\thispagestyle{empty}
+\subsection{主题15：python matplotlib}  
+\subsubsection{内容}
+绘制简单饼状图\\
+\includegraphics[width=0.8\textwidth]{test15_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test15_02}\\
+\vspace{1cm}
+\subsection{主题16：python matplotlib}  
+\subsubsection{内容}
+绘制简单折线图\\
+\includegraphics[width=0.8\textwidth]{test16_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test16_02}\\
+\vspace{1cm}
+\subsection{主题17：python PIL}  
+\subsubsection{内容}
+1.调用图片\\
+\includegraphics[width=0.8\textwidth]{test20_02}\\
+2.可展示图片，也可保留图片，可保留不同格式，不同路径\\
+\includegraphics[width=0.8\textwidth]{test20_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test20_03}\\
+\newpage
+\thispagestyle{empty}
+\subsection{主题18：python PIL}  
+\subsubsection{内容}
+实现镜像图片\\
+\includegraphics[width=0.8\textwidth]{test18_01}\\
+镜像前：\\
+\includegraphics[width=0.8\textwidth]{test18_02}\\
+镜像后：\\
+\includegraphics[width=0.8\textwidth]{test18_03}\\
+\subsubsection{结果}  
+\vspace{1cm}
+\subsection{主题19：python PIL}  
+\subsubsection{内容}
+1.设置两张图片
+\includegraphics[width=0.8\textwidth]{test17_01}\\
+2.设置新图片作拼接
+\includegraphics[width=0.8\textwidth]{test17_02}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test17_03}\\
+\vspace{1cm}
+\subsection{主题20：python PIL}  
+\subsubsection{内容}
+图片裁剪，去除多余白边\\
+\includegraphics[width=0.8\textwidth]{test19_01}\\
+\subsubsection{结果}  
+裁剪前：\\
+\includegraphics[width=0.8\textwidth]{test19_02}\\
+裁剪后：\\
+\includegraphics[width=0.8\textwidth]{test19_03}\\
+\vspace{1cm}
+\newpage
+\thispagestyle{empty}
+\section{解题感悟}  
+这次的学习内容非常多，学的很累，第一次接触python后立马就跟着学了PIL,matplotlib等库，但总体来说收获也比前两次课要多的多。也是体会到了python这门语言的独特之处，希望可以借此机会好好深入了解一下python。\\
+\href{https://github.com/coff-sug/system_development.git}{github地址[点击]}
+\end{document}

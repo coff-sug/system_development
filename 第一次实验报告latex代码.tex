@@ -1,0 +1,232 @@
+\documentclass{article}
+%导言区
+\setlength{\parindent}{0pt}
+\usepackage{float} % 引入float宏包
+\usepackage{listings}
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage[a4paper, body={18cm,22cm}]{geometry}
+\usepackage{amsmath,amssymb,amstext,wasysym,enumerate,graphicx}
+\usepackage{float,abstract,booktabs,indentfirst,amsmath}
+\usepackage{array}
+\usepackage{booktabs} %调整表格线与上下内容的间隔
+\usepackage{multirow}
+\usepackage{diagbox}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\graphicspath{{figures/}}
+
+%正文区
+\begin{document}
+\begin{titlepage}
+\centering
+\includegraphics[width=12cm,height=10cm]{logo}\\
+\vspace{2cm}
+{\Huge \heiti 系统开发工具基础实验报告\\} 
+
+\vspace{4cm}
+\begin{table}[h]
+        \centering
+        \begin{Large}
+            \begin{tabular}{p{3cm} p{7cm}<{\centering}}
+                上课时间: &  周五1-4节     \\ \cline{2-2}
+                姓\qquad 名:      & 张仕达   \\ \cline{2-2}
+                学\qquad 号: & 23010022094 \\ \cline{2-2}
+                指导老师:       & 周小伟 \\ \cline{2-2}
+            \end{tabular}
+        \end{Large}     
+    \end{table}
+\end{titlepage}
+\newpage % 插入新页  
+\thispagestyle{empty} % 当前页不显示页码  
+\section{实验内容}
+\subsection{主题1：git bash 的基本配置：设置和查看用户的配置信息。}  
+\subsubsection{内容}
+1. 打开 Git Bash\\
+2. 设置用户信息\\
+git config –global user.name ”name”\\
+git config –global user.email ”eamil”\\
+3. 查看配置信息\\
+git config –global user.name\\
+git config –global user.email\\ 
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test1}\\
+\vspace{1cm}
+\subsection{主题2：git 的基本指令：创建本地仓库。}  
+\subsubsection{内容}
+1. 创建一个目录\\
+2. 在目录内打开 Git Bash 窗口，执行命令 git init，将当前目录初始化为一个仓库\\
+3. 创建成功后生成一个隐藏文件.git\\
+\subsubsection{结果}   
+\includegraphics[width=0.8\textwidth]{test3}\\
+\subsection{主题3：git 的操作指令：提交文件至本地仓库。}  
+\subsubsection{内容}
+1. 将当前目录内的文件提交到暂存区 git add filename\\
+2. 将所有文件都提交到暂存区 git add .\\
+3. 将暂存区的文件提交到本店仓库\\
+git commit -m ’ 注释内容’\\
+\subsubsection{结果} 
+\includegraphics[width=0.8\textwidth]{test4}\\ 
+\subsection{主题4：git的操作指令：查看文件状态、查看提交日志}  
+\subsubsection{内容}
+1.每次提交文件到暂存区或本地仓库都可用 git status 查看文件状态\\
+2.查看提交日志  git log [option]\\
+其中[option]:
+--all 显示所有分支\\
+--pretty=oneline 将提交信息显示为一行\\
+--abbrev-commit 使得输出的commitId更简短\\
+--graph 以图的形式显示
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test5}\\
+\subsection{主题5：git的操作指令：为常用指令配置别名}  
+\subsubsection{内容}
+1.打开用户目录，创建 .bashrc 文件，输入如下内容（举例）：\\
+用于输出git提交日志：\\
+alias git-log='git log --pretty=oneline --all --graph --abbrev-commit'\\
+用于输出当前目录所有文件及基本信息\\
+alias ll='ls -al'：\\
+2."="右边''内的的指令可用左边指令代替，使用起来更加简便
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test6_01}\\
+\includegraphics[width=0.8\textwidth]{test6_02}\\
+\includegraphics[width=0.8\textwidth]{test6_03}\\
+\vspace{1cm}
+\subsection{主题6：git的操作指令：添加文件至忽略列表}  
+\subsubsection{内容}
+1.在当前目录中创建一个名为 .gitignore 的文件\\
+2.在目录中输入相关信息可使相关文件不受git管理\\
+例：输入 *.a  表示忽略目录中所有以.a结尾的文件
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test601}\\
+\includegraphics[width=0.8\textwidth]{test602}\\
+\vspace{1cm}
+\subsection{主题7：git的操作指令：创建分支、切换分支}  
+\subsubsection{内容}
+1.创建分支 git branch 分支名\\
+2.切换分支 git checkout 分支名\\
+3.查看当前分支 git branch
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test7_01}\\
+\includegraphics[width=0.8\textwidth]{test7_02}\\
+\includegraphics[width=0.8\textwidth]{test7_03}\\
+\newpage
+\thispagestyle{empty}
+\subsection{主题8：git的操作指令：解决合并冲突、合并分支、删除分支}  
+\subsubsection{内容}
+1.将一个分支上的提交合并到另一个分支 git merge 分支名\\
+2.如果两个分支对文件的修改存在冲突则无法合并\\
+3.需要对被合并的文件进行修改后再合并\\
+4.git branch -d b1 删除分支\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test8_01}\\
+\includegraphics[width=0.8\textwidth]{test8_02}\\
+\vspace{1cm}
+\subsection{主题9：git的操作指令：版本回退}  
+\subsubsection{内容}
+git reset --hard commitID\\
+commitID 可以使用 git-log 或 git log 指令查看\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test9}\\
+\vspace{1cm}
+\subsection{主题10：git的操作指令：添加远程仓库}  
+\subsubsection{内容}
+1.初始化本地库之后，与已创建的远程仓库进行对接（示例为github）\\
+命令： git remote add <远端名称> <仓库路径>\\
+远端名称，默认是origin，取决于远端服务器设置\\
+2.查看远端仓库 git remote
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test10}\\
+\vspace{1cm}
+\subsection{主题11：git的操作指令：将文件推送到远程仓库}  
+\subsubsection{内容}
+命令：git push  [远端名称] [本地分支名][:远端分支名]\\
+如果远程分支名和本地分支名称相同，则可以只写本地分支\\
+git push origin master\\
+如果当前分支已经和远端分支关联，则可以省略分支名和远端名。\\
+git push 将master分支推送到已关联的远端分支\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test11_01}\\
+\includegraphics[width=0.8\textwidth]{test11_02}\\
+\vspace{1cm}
+\subsection{主题12：git的操作指令：从远程仓库克隆}  
+\subsubsection{内容}
+如果已经有一个远端仓库，我们可以直接clone到本地。\\
+命令: git clone <仓库路径> [本地目录]\\
+本地目录可以省略，会自动生成一个目录\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test12_01}\\
+\includegraphics[width=0.8\textwidth]{test12_02}\\
+\vspace{1cm}
+\subsection{主题13：git的操作指令：从远程仓库抓取、拉取}  
+\subsubsection{内容}
+1.抓取 命令：git fetch [remote name] [branch name]\\
+抓取指令就是将仓库里的更新都抓取到本地，不会进行合并\\
+如果不指定远端名称和分支名，则抓取所有分支。\\
+2.拉取 命令：git pull [remote name] [branch name]\\
+拉取指令就是将远端仓库的修改拉到本地并自动进行合并，等同于fetch+merge\\
+如果不指定远端名称和分支名，则抓取所有并更新当前分支\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test13_01}\\
+\includegraphics[width=0.8\textwidth]{test13_02}\\
+\includegraphics[width=0.8\textwidth]{test13_03}\\
+\includegraphics[width=0.8\textwidth]{test13_04}\\
+\vspace{1cm}
+\subsection{主题14：latex对标题、作者、时间和引用的编辑}  
+\subsubsection{内容}
+在导言区插入标题、作者、时间的信息，在正文区进行引用\\
+在标题之后加入引用\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test14_01}\\
+\includegraphics[width=0.8\textwidth]{test14_02}\\
+\newpage
+\thispagestyle{empty}
+\subsection{主题15：latex的标题架构}  
+\subsubsection{内容}
+标题设置：一级标题section{}，耳机标题subsection{}，三级标题subsubsection{}；\\\\
+段落设置：在一段的最后添加par代表一段的结束:\\\\
+目录设置：在begin{document}内容中添加tableofcontents\\\\\\\\\\\\
+\includegraphics[width=0.8\textwidth]{test15_01}
+\subsubsection{结果} 
+\includegraphics[width=0.8\textwidth]{test15_02}\\
+\vspace{1cm}
+\subsection{主题16：latex插入图片} 
+\subsubsection{内容}
+需要导入宏包：usepackage{graphicx}\\
+导入图片所在的路径：graphicspath{{figures/}}%图片位于figures文件夹内
+\\正文区引入图片：includegraphics[]{logo}%[]内设置图片参数 {}内输入图片名称
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test16_01}\\
+\includegraphics[width=0.8\textwidth]{test16_02}\\
+\vspace{1cm}
+\subsection{主题17：latex插入表格}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test17_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test17_01}\\
+\vspace{1cm}
+\subsection{主题18：latex改变字体、大小}  
+\subsubsection{内容}
+使用代码：{字体 内容}\\
+使用代码：{大小 内容}
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test18_01}\\
+\includegraphics[width=0.8\textwidth]{test18_02}\\
+\vspace{1cm}
+\subsection{主题19：latex: 使用算法（伪代码）}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test19_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test19_02}\\
+\vspace{1cm}
+\subsection{主题20：latex:使用代码块}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test20_01}\\
+\subsubsection{结果} 
+\includegraphics[width=0.8\textwidth]{test20_02}\\ 
+\newpage
+\thispagestyle{empty}
+\section{解题感悟}  
+ git和latex的学习对我来说是非常有益的。git让我实现了在本地仓库与远程仓库上对代码的管理，我可以使用git和其他人方便地共同开发一个项目，也可以将我的代码成果保存起来供其他人评价，更重要的是供我以后的学习回顾。而学习latex则教会了我对报告、论文模版的编辑，这对我以后进行数学建模等比赛有很大的裨益。\\\\
+\href{https://github.com/coff-sug/system_development.git}{github地址[点击]}
+\end{document}
+
+
