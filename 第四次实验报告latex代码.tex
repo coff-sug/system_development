@@ -1,0 +1,187 @@
+\documentclass{article}
+%导言区
+\setlength{\parindent}{0pt}
+\usepackage{listings}
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage[a4paper, body={18cm,22cm}]{geometry}
+\usepackage{amsmath,amssymb,amstext,wasysym,enumerate,graphicx}
+\usepackage{float,abstract,booktabs,indentfirst,amsmath}
+\usepackage{array}
+\usepackage{booktabs} %调整表格线与上下内容的间隔
+\usepackage{multirow}
+\usepackage{diagbox}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\graphicspath{{figures4/}}
+
+%正文区
+\begin{document}
+\begin{titlepage}
+\centering
+\includegraphics[width=12cm,height=10cm]{logo}\\
+\vspace{2cm}
+{\Huge \heiti 系统开发工具基础实验报告\\} 
+
+\vspace{4cm}
+\begin{table}[h]
+        \centering
+        \begin{Large}
+            \begin{tabular}{p{3cm} p{7cm}<{\centering}}
+                上课时间: &  周五1-4节     \\ \cline{2-2}
+                姓\qquad 名:      & 张仕达   \\ \cline{2-2}
+                学\qquad 号: & 23010022094 \\ \cline{2-2}
+                指导老师:       & 周小伟 \\ \cline{2-2}
+            \end{tabular}
+        \end{Large}     
+    \end{table}
+\end{titlepage}
+\newpage % 插入新页  
+\thispagestyle{empty} % 当前页不显示页码  
+\section{实验内容}
+\subsection{主题1：调试：获取最近一天中超级用户的登录信息及其所执行的指令}  
+\subsubsection{内容}
+使用 Linux 上的 journalctl 或 macOS 上的 log show 命令来获取最近一天中超级用户的登录信息及其所执行的指令。\\
+如果找不到相关信息，您可以执行一些无害的命令，例如 sudo ls 然后再次查看。\\
+\subsubsection{结果} 
+\includegraphics[width=0.8\textwidth]{test01}\\
+\vspace{1cm}
+\subsection{主题2：修改键位映射}  
+\subsubsection{内容}
+利用PowerToys可修改键位映射\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test02}\\
+\vspace{1cm}
+\subsection{主题3：守护进程}  
+\subsubsection{内容}
+Linux中找出正在运行的所有守护进程\\
+命令：systemctl status\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test03}\\
+\vspace{1cm}
+\subsection{主题4：常见命令行标志参数及模式}  
+\subsubsection{内容}
+一些操作的使用用法可以用\\
+指令 --help 来查询\\
+\subsubsection{结果}
+\includegraphics[width=0.8\textwidth]{test04}\\  
+\vspace{1cm}
+\subsection{主题5：Markdown使用：设置标题}  
+\subsubsection{内容}
+使用*加标题名来设置\\
+*数目的多少代表大小标题\\
+\includegraphics[width=0.8\textwidth]{test05_01}\\  
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test05_02}\\  
+\vspace{1cm}
+\subsection{主题6：Markdown使用：粗体、斜体}  
+\subsubsection{内容}
+粗体：**粗体内容**\\
+斜体：*斜体内容*\\
+\includegraphics[width=0.8\textwidth]{test06_01}\\  
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test06_02}\\  
+\vspace{1cm}
+\subsection{主题7：Markdown使用:引用块、代码块}  
+\subsubsection{内容}
+引用\\
+\includegraphics[width=0.8\textwidth]{test07_01}\\  
+代码块\\
+\includegraphics[width=0.8\textwidth]{test07_02}\\  
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test07_03}\\  
+\newpage
+\thispagestyle{empty}
+\subsection{主题8：Markdown使用：列表}  
+\subsubsection{内容}
+有序列表\\
+\includegraphics[width=0.8\textwidth]{test08_01}\\  
+无序列表\\
+\includegraphics[width=0.8\textwidth]{test08_02}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test08_03}\\
+\vspace{1cm}
+\subsection{主题9：Markdown使用：表格}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test09_01}\\  
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test09_02}\\  
+\vspace{1cm}
+\subsection{主题10：Markdown使用：数学公式}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test010_01}\\  
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test010_02}\\  
+\vspace{1cm}
+\subsection{主题11：Markdown使用：Mermaid流程图}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test11_01}\\  
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test11_02}\\  
+\vspace{1cm}
+\subsection{主题12：Markdown使用：Flowchart流程图}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test12_01}\\  
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test12_02}\\  
+\vspace{1cm}
+\subsection{主题13：Markdown使用：时序图}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test13_01}\\ 
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test13_02}\\ 
+\vspace{1cm}
+\subsection{主题14：Markdown使用：甘特图}  
+\subsubsection{内容}
+\includegraphics[width=0.8\textwidth]{test14_01}\\ 
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test14_02}\\ 
+\newpage
+\thispagestyle{empty}
+\subsection{主题15：github的使用}  
+\subsubsection{内容}
+在github上创建仓库提交文件\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test15}\\ 
+\vspace{1cm}
+\subsection{主题16：pytorch入门}  
+\subsubsection{内容}
+torch.randperm(n) 函数用于生成一个从 0 到 n-1 的随机排列\\
+\includegraphics[width=0.8\textwidth]{test16_01}\\ 
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test16_02}\\ 
+\vspace{1cm}
+\subsection{主题17：pytorch入门}  
+\subsubsection{内容}
+torch.eye(3)  生成单位矩阵\\
+torch.zeros((2, 3))  生成零矩阵\\
+torch.rand((2, 2)) 生成随机分布矩阵\\
+\includegraphics[width=0.8\textwidth]{test17_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test17_02}\\ 
+\vspace{1cm}
+\subsection{主题18：pytorch入门}  
+\subsubsection{内容}
+数学运算\\
+\includegraphics[width=0.8\textwidth]{test18_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test18_02}\\
+\vspace{1cm}
+\subsection{主题19：pytorch入门}  
+\subsubsection{内容}
+stack为拼接函数，函数的第一个参数为需要拼接的Tensor，第二个参数为细分到哪个维度\\
+\includegraphics[width=0.8\textwidth]{test19_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test19_02}\\
+\vspace{1cm}
+\subsection{主题20：pytorch入门}  
+\subsubsection{内容}
+使用自动微分机制配套使用SGD随机梯度下降来求最小值\\
+\includegraphics[width=0.8\textwidth]{test20_01}\\
+\subsubsection{结果}  
+\includegraphics[width=0.8\textwidth]{test20_02}\\
+\newpage
+\thispagestyle{empty}
+\section{解题感悟}  
+这次实验内容很多，特别是大杂烩，而pytorch又是深度学习的内容，之前从来没有接触过，所以进度一直很慢。结束之后就发现收获还是很大的，为我以后的学习打下了一定的基础。希望以后能有更多的机会学习这种新知识。
+\href{https://github.com/coff-sug/system_development.git}{github地址[点击]}
+\end{document}
